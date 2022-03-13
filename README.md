@@ -26,7 +26,7 @@ Participantes que aprobaron finalmente la cursada:
 
 - Emil Hromek
 
-Al finalizar la cursada el trabajo no quedó completamente terminado, así que ahora me estoy encargando de completar todo lo necesario. Para ello he hecho modificaciones no sólo en el microservicio de paquetes, sino también en el de viajes y en el frontend. A la brevedad comenzaré con el de usuarios.
+Al finalizar la cursada, el trabajo no quedó completamente terminado, así que ahora me estoy encargando de completar todo lo necesario. Para ello he hecho modificaciones no sólo en el microservicio de paquetes, sino también en el de viajes y en el frontend. A la brevedad comenzaré con el de usuarios.
 
 Link al repositorio original de la cursada: https://github.com/PaquetesTuristicos/
 
