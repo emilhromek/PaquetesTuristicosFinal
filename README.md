@@ -30,4 +30,4 @@ Al finalizar la cursada el trabajo no quedó completamente terminado, así que a
 
 Link al repositorio original de la cursada: https://github.com/PaquetesTuristicos/
 
-La razón por la que creé un nuevo repositorio es para preservar el original.
+La razón por la que creé este nuevo repositorio es para preservar el original.
