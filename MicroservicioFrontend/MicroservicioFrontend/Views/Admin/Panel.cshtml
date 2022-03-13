@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+<!-- Contenido  -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                  <!-- Page Heading -->
+                  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                      <h1 class="h3 mb-0 text-gray-800">Panel</h1>
+                      <a href="http://localhost/paquetes/Frontend/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fa fa-eye" aria-hidden="true"></i> Sitio web</a>
+                  </div>
+
+                  <!-- Content Row -->
+                  <div class="row">
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                              Reservas</div>
+                                          <div id="reservas" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-success shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                              Pasajeros registrados</div>
+                                          <div id="pasajeros" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                                            <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-success shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                              Paquetes</div>
+                                          <div id="paquetes" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-briefcase fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+
+
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-warning shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                              Transportes</div>
+                                          <div id="transportes" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                          <i class="fa fa-bus fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                              Destinos</div>
+                                          <div id="destinos" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-picture-o fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-success shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                              Usuarios</div>
+                                          <div id="usuarios" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-user-secret fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Earnings (Monthly) Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Hoteles</div>
+                                        <div id="hoteles" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                      <!-- Pending Requests Card Example -->
+                      <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-warning shadow h-100 py-2">
+                              <div class="card-body">
+                                  <div class="row no-gutters align-items-center">
+                                      <div class="col mr-2">
+                                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                              Choferes</div>
+                                          <div id="choferes" class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                      </div>
+                                      <div class="col-auto">
+                                        <i class="fa fa-id-card-o fa-3x" aria-hidden="true"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- /.container-fluid -->
+
+          </div>
+          <!-- End of Main Content -->
+          </main>
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="~/admin/js/bootstrap.bundle.min.js"></script>
+          <script src="~/admin/js/js.js"></script>
+          <script src="~/admin/js/panel.js"></script>
+    <script src="~/admin/js/sidebars.js"></script>
+      
+      

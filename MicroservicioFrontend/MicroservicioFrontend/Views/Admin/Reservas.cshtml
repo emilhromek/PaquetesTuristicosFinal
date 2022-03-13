@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+<!-- Contenido  -->
+<div class="container">
+  <div class="row">
+<h2>Administracion de Reservas</h2>
+  </div>
+  <div>
+
+    <div>
+      <div>
+      <!-- Button trigger modal -->
+      <button id="nuevoPaquete" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cargarPaqueteModal">
+      Nueva Reserva
+      </button>
+
+            <!-- Modal Ver -->
+            <div class="modal fade" id="verpaqueteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form id="verpaqueteForm">
+    
+                          </form>
+                          <div class="mt-3" id="editarViajeRespuesta">
+          
+                          </div>
+                      </div>
+          
+                  </div>
+              </div>
+          </div>   
+
+          <br>
+          <br>
+          <form id="buscarByEmail">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Busqueda</label>
+              <input id="searchTerm" onkeyup="doSearch()" name="buscar" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Buscar...">
+            </div>
+          </form>
+<div id="contenido" class="container">
+
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="~/admin/js/bootstrap.bundle.min.js"></script>
+<script src="~/admin/js/js.js"></script>
+    <script src="~/admin/js/sidebars.js"></script>
+      <script src="~/admin/js/reserva.js"></script>
+      <script src="~/admin/js/buscador.js"></script>

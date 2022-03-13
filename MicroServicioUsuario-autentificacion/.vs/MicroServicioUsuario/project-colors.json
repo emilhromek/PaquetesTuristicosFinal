@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "82ece282-d10a-45e1-92ad-d92f33a97a5b": {
+      "ProjectGuid": "82ece282-d10a-45e1-92ad-d92f33a97a5b",
+      "DisplayName": "Turismo.Template.AccessData",
+      "ColorIndex": 0
+    },
+    "81850eb7-9d3a-432c-9ed0-d7eb5b13be0b": {
+      "ProjectGuid": "81850eb7-9d3a-432c-9ed0-d7eb5b13be0b",
+      "DisplayName": "Turismo.Template.API",
+      "ColorIndex": 1
+    },
+    "1a2a4879-f966-45e4-a359-a1a603b07c6c": {
+      "ProjectGuid": "1a2a4879-f966-45e4-a359-a1a603b07c6c",
+      "DisplayName": "Turismo.Template.Application",
+      "ColorIndex": 2
+    },
+    "119383aa-4550-4135-9d16-fc11b2b7e422": {
+      "ProjectGuid": "119383aa-4550-4135-9d16-fc11b2b7e422",
+      "DisplayName": "Turismo.Template.Domain",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

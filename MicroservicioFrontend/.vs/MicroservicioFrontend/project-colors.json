@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "404b0165-99d1-4df5-a2bb-d9407cca5de6": {
+      "ProjectGuid": "404b0165-99d1-4df5-a2bb-d9407cca5de6",
+      "DisplayName": "MicroservicioFrontend",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

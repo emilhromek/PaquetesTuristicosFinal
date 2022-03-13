@@ -1,0 +1,229 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+<!-- Contenido  -->
+<div class="container todo" id="todo">
+  <div class="row">
+<h2>Administracion de Usuarios</h2>
+  </div>
+  <div>
+
+ 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cargarUsuarioModal">
+    Nuevo Usuario
+    </button>   
+    <!-- Modal -->
+    <div class="modal fade" id="cargarUsuarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="cargarUsuarioForm">                   
+                        <input type="text" name="nombre" placeholder="Ingresa Nombre" class="form-control my-3" required />
+                        <input type="text" name="apellido" placeholder="Ingresa Apellido" class="form-control my-3" required />
+                        <input type="text" name="email" placeholder="Ingresa Email" class="form-control my-3" required />
+                        <input type="password" name="password" placeholder="Ingresa Password" class="form-control my-3" required />
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Tipo</label>
+                            <select id="roll" class="form-select selectRoll" required>
+                                <option selected value="">Seleccione Roll...</option>
+                                <option type="text" value="1" id="1">Administrador</option>
+                                <option type="text" value="2" id="2">Empleado</option>
+                                <option type="text" value="3" id="3">Cliente</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" onclick="createUsuario()">Crear</button>
+                        </div>
+                    </form>
+                    <div class="mt-3" id="cargarUsuarioRespuesta">
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal Empleado -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cargarEmpleadoModal">
+      Nuevo Empleado
+      </button>   
+      <!-- Modal Empleado -->
+      <div class="modal fade" id="cargarEmpleadoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Nuevo Empleado</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="cargarEmpleadoForm">     
+                        <input type="number" name="id" placeholder="Ingresa id" class="form-control my-3" required />              
+                          <input type="number" name="dni" placeholder="Ingresa DNI" class="form-control my-3" required />
+                          <input type="number" name="telefono" placeholder="Ingresa telefono" class="form-control my-3" required />
+                          <input type="datetime-local" name="fechaNacimiento" placeholder="Ingresa Fecha de nacimiento" class="form-control my-3" required />
+                          <input type="number" name="legajo" placeholder="Ingresa Legajo" class="form-control my-3" required />
+                          <input type="number" name="sueldo" placeholder="Ingresa Sueldo" class="form-control my-3" required />
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary" onclick="createEmpleado()">Crear</button>
+                          </div>
+                      </form>
+                      <div class="mt-3" id="cargarUsuarioRespuesta">
+      
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+
+      <!-- Button trigger modal Pasajero -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cargarPasajeroModal">
+      Nuevo Psajero
+      </button>   
+      <!-- Modal Pasajero -->
+      <div class="modal fade" id="cargarPasajeroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Nuevo Pasajero</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="cargarPasajeroForm">
+                        <input type="number" name="id" placeholder="Ingresa id" class="form-control my-3" required />                   
+                          <input type="number" name="dni" placeholder="Ingresa DNI" class="form-control my-3" required />
+                          <input type="number" name="telefono" placeholder="Ingresa telefono" class="form-control my-3" required />
+                          <input type="datetime-local" name="fechaNacimiento" placeholder="Ingresa Fecha de nacimiento" class="form-control my-3" required />
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary" onclick="createPasajero()">Crear</button>
+                          </div>
+                      </form>
+                      <div class="mt-3" id="cargarUsuarioRespuesta">
+      
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+    <!-- Modal editar -->
+    <div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUsuarioForm">
+                    <input type="number" name="id" placeholder="" class="form-control my-3 id" required />
+                        <input type="text" name="nombre" placeholder="Ingresa Nombre" class="form-control my-3 nombre" required />
+                        <input type="text" name="apellido" placeholder="Ingresa Apellido" class="form-control my-3 apellido" required />
+                        <input type="text" name="email" placeholder="Ingresa Email" class="form-control my-3 email" required />
+                        <input type="password" name="password" placeholder="Ingresa Password" class="form-control my-3 password" required />
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Tipo</label>
+                            <select id="editroll" class="form-select selectRoll" required>
+                                <option selected value="">Seleccione Roll...</option>
+                                <option type="text" value="1" id="1">Administrador</option>
+                                <option type="text" value="2" id="2">Empleado</option>
+                                <option type="text" value="3" id="3">Cliente</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="editarUsuario" type="button" class="btn btn-primary">Editar</button>
+                        </div>
+                    </form>
+                    <div class="mt-3" id="editarUsuarioRespuesta">
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+            
+   <!-- Modal agregar datos -->
+   <div class="modal fade" id="AgregarDatosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Datos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="agregarDatosForm">
+                  <p>Solo Empleados</p>
+                <input type="number" name="id" placeholder="" class="form-control my-3 id" readonly />
+                <input type="email" name="email" placeholder="" class="form-control my-3 email" readonly />
+                    <input type="number" name="dni" placeholder="Ingresa dni" class="form-control my-3 dni" required />
+                    <input type="number" name="telefono" placeholder="Ingresa telefono" class="form-control my-3 telefono" required />
+                    <input type="datetime-local" name="fechaNacimiento" placeholder="Ingresa Cumpleaños" class="form-control my-3 fechaNacimiento" required />
+                    <input type="number" name="legajo" placeholder="Ingresa legajo" class="form-control my-3 legajo" required />
+                    <input type="number" name="sueldo" placeholder="Ingresa sueldo" class="form-control my-3 sueldo" required />
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="agregarDatos" type="button" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+                <div class="mt-3" id="editarUsuarioRespuesta">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>          
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Datos
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <li><a class="dropdown-item" href="#" onclick="pintar()">Usuario</a></li>
+                <li><a class="dropdown-item" href="#" onclick="empleados()">Empleado</a></li>
+                <li><a class="dropdown-item" href="#" onclick="pasajeros()">Pasajero</a></li>
+              </ul>
+            </div>
+          
+    </div>
+    <br>
+    <form id="buscarByEmail">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Busqueda por Email</label>
+        <input id="emailId" name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@spliters.com">
+      </div>
+    </form>
+ 
+    <div>
+    </div>
+  <div id="contenido" class="row">
+
+  </div>
+  
+  <div id="contenidoEmpleado" class="row">
+  
+  </div>
+  
+  <div id="contenidoPasajero" class="row">
+  
+  </div>
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="~/admin/js/bootstrap.bundle.min.js"></script>
+<script src="~/admin/js/js.js"></script>
+<script src="~/admin/js/usuario.js"></script>
+    <script src="~/admin/js/sidebars.js"></script>
+      

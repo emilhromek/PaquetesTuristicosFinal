@@ -1,0 +1,435 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.API\\Turismo.Template.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj",
+        "projectName": "Turismo.Template.AccessData",
+        "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj",
+        "packagesPath": "C:\\Users\\emil2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emil2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
+                "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj"
+              },
+              "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+                "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[2.3.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.API\\Turismo.Template.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.API\\Turismo.Template.API.csproj",
+        "projectName": "Turismo.Template.API",
+        "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.API\\Turismo.Template.API.csproj",
+        "packagesPath": "C:\\Users\\emil2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emil2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj": {
+                "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj"
+              },
+              "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
+                "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "TourmalineCore.AspNetCore.JwtAuthentication.Core": {
+              "target": "Package",
+              "version": "[0.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
+        "projectName": "Turismo.Template.Application",
+        "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
+        "packagesPath": "C:\\Users\\emil2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emil2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+                "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "projectName": "Turismo.Template.Domain",
+        "projectPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "packagesPath": "C:\\Users\\emil2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emil2\\OneDrive\\Escritorio\\Proyecto software - tp integrador\\MicroServicioUsuario-autentificacion\\Turismo.Template.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emil2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

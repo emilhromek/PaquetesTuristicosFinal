@@ -1,0 +1,207 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+<!-- Contenido  -->
+<div class="container">
+  <div class="row">
+<h2>Administracion de Viajes</h2>
+  </div>
+  <div>
+
+    <div>
+      <div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#cargarViajeModal">
+      Nuevo Viaje
+      </button>   
+      <!-- Modal -->
+      <div class="modal fade" id="cargarViajeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Nuevo Viaje</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="cargarViajeForm">
+                          <p>Elija el paquete:</p>   
+                          <select class="form-select" name="paqueteId" id="selectPaqueteViaje" aria-label="Default select example">
+                            <option selected disabled>Elegir paquete</option>
+                          </select>
+                          <br>
+                          <p>Elija grupo:</p>
+                            <select class="form-select" name="grupoId" id="selectGrupoViaje" aria-label="Default select example">
+                              <option selected disabled>Elegir grupo</option>
+                            </select>
+                            <br>
+                            <p>Fecha y hora de salida (desde terminal):</p>
+                             <input type="datetime-local" id="fechaSalida" name="fechaSalida" class="form-control my-3" readonly>
+                             <p>Fecha y hora de arribo (fijo según paquete):</p>
+                             <input type="datetime-local" id="fechaArribo" name="fechaArribo" class="form-control my-3" readonly>
+                             <p>Fecha y hora de partida (fijo según paquete):</p>
+                             <input type="datetime-local" id="fechaPartida" name="fechaPartida" class="form-control my-3" readonly>
+                             <p>Fecha y hora de llegada (a terminal):</p>
+                             <input type="datetime-local" id="fechaLlegada" name="fechaLlegada" class="form-control my-3" readonly>
+
+                          <p>Elija la terminal de salida:</p>   
+                          <select class="form-select terminal1Id" name="terminal1Id" id="selectTerminal1Id" aria-label="Default select example">
+                            
+                          </select>
+                          <br>
+
+                          <p>Elija una segunda terminal de salida (opcional):</p>   
+                          <select class="form-select terminal2Id" name="terminal2Id" id="selectTerminal2Id" aria-label="Default select example">
+                            <option selected disabled>Elija segunda terminal (opcional)</option>
+                          </select>
+                          <br>
+
+                          <p>Elija una tercera terminal de salida (opcional):</p>   
+                          <select class="form-select terminal3Id" name="terminal3Id" id="selectTerminal3Id" aria-label="Default select example">
+                            <option selected disabled>Elija tercer terminal (opcional)</option>
+                          </select>
+                          <br>                          
+
+                          <p>Elija el/la primer/a chofer:</p>   
+                          <select class="form-select chofer1Id" name="chofer1Id" id="selectChofer1Viaje" aria-label="Default select example">
+                            <option selected disabled>Elegir primer chofer</option>
+                          </select>
+                          <br>
+                          <p>Elija el/la segundo/a chofer:</p>   
+                          <select class="form-select chofer2Id" name="chofer2Id" id="selectChofer2Viaje" aria-label="Default select example">
+                            <option selected disabled>Elegir segundo chofer</option>
+                          </select>
+                          <br>
+                          <p>Elija el/la coordinador/a:</p>   
+                          <select class="form-select coordinador" name="coordinador" id="selectCoordinadorViaje" aria-label="Default select example">
+                            <option selected disabled>Elegir coordinador/a</option>
+                          </select>
+                          <br>
+                          <p>Elija bus:</p>   
+                          <select class="form-select bus" name="bus" id="selectBusViaje" aria-label="Default select example">
+                            <option selected disabled>Elegir bus</option>
+                          </select>
+                          <br>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary" onclick="createViaje()">Crear</button>
+                          </div>
+                      </form>
+                      <div class="mt-3" id="cargarViajeRespuesta">
+      
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+      <!-- Modal editar viaje-->
+      <div class="modal fade" id="editarViajeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar viaje</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="EditarViajeForm">
+                        <p>Elija el paquete:</p>   
+                        <select class="form-select selectPaqueteViaje" name="paqueteId" id="selectPaqueteViajeActualizar" aria-label="Default select example" readonly>
+                        </select>
+                        <br>
+                        <p>Elija grupo:</p>
+                          <select class="form-select selectGrupoViaje" name="grupoId" id="selectGrupoViajeActualizar aria-label="Default select example">
+                          </select>
+                          <br>
+                          <p>Fecha y hora de salida (desde terminal):</p>
+                             <input type="datetime-local" id="fechaSalidaActualizar" name="fechaSalida" class="form-control my-3 fechaSalida" readonly>
+                             <p>Fecha y hora de llegada (a terminal):</p>
+                             <input type="datetime-local" id="fechaLlegadaActualizar" name="fechaLlegada" class="form-control my-3 fechaLlegada" readonly>
+                          <input type="number" name="tipoViajeId" placeholder="Ingresa tipoViajeId" class="form-control my-3" required />
+                        <input type="number" name="tipoViajeId" placeholder="Ingresa tipoViajeId" class="form-control my-3 tipoviajeId" required />
+                        <input type="number" name="terminalOrigenId" placeholder="Ingresa terminalOrigenId" class="form-control my-3 terminalOrigenId" required />
+                        <input type="number" name="terminalDestinoId" placeholder="Ingresa terminalDestinoId" class="form-control my-3 terminalDestinoId" required />
+                        <p>Elija el/la primer chofer:</p>   
+                          <select class="form-select chofer1Id" name="chofer1Id" id="selectChofer1ViajeActualizar" aria-label="Default select example">
+                            <option selected disabled>Elegir primer chofer</option>
+                          </select>
+                          <br>
+                          <p>Elija el/la segundo chofer:</p>   
+                          <select class="form-select chofer2Id" name="chofer2Id" id="selectChofer2ViajeActualizar" aria-label="Default select example">
+                            <option selected disabled>Elegir segundo chofer</option>
+                          </select>
+                          <br>
+                          <p>Elija el/la coordinador/a:</p>   
+                          <select class="form-select coordinador" name="coordinador" id="selectCoordinadorViajeActualizar" aria-label="Default select example">
+                            <option selected disabled>Elegir coordinador/a</option>
+                          </select>
+                          <br>
+                          <p>Elija bus:</p>   
+                          <select class="form-select bus" name="bus" id="selectBusViajeActualizar" aria-label="Default select example">
+                            <option selected disabled>Elegir bus</option>
+                          </select>
+                          <br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" onclick="actualizarViaje()">Actualizar</button>
+                        </div>
+                    </form>
+                    <div class="mt-3" id="cargarViajeRespuesta">
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+            
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Datos
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <li><a class="dropdown-item" href="#" onclick="pintarViajes()">Viajes</a></li>
+                  <li><a class="dropdown-item" href="#"onclick="pintarTerminales()">Terminal</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="pintarCoordinadores()">Coordinador</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="pintarGrupos()">Grupos</a></li>
+                </ul>
+              </div>
+            
+      </div>
+      <br>
+      <form id="buscarByEmail">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Busqueda</label>
+          <input id="searchTerm" onkeyup="doSearch()" name="buscar" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Buscar...">
+        </div>
+      </form>
+      <div id="contenido" class="container">
+
+      </div>
+      
+      <div id="contenidoTerminal" class="container">
+      
+      </div>
+      
+      <div id="contenidoEmpresa" class="container">
+      
+      </div>
+      <div id="contenidoCoordinador" class="container">
+      
+      </div>
+      <div id="contenidoChofer" class="container">
+      
+      </div>
+      <div id="contenidoBus" class="container">
+      
+      </div>
+    </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="~/admin/js/bootstrap.bundle.min.js"></script>
+    <script src="~/admin/js/js.js"></script>
+    <script src="~/admin/js/viaje.js"></script>
+    <script src="~/admin/js/sidebars.js"></script>
+    <script src="~/admin/js/buscador.js"></script>
+      

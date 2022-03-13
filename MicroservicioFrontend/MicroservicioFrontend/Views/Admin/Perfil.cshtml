@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="b-example-divider"></div>
+
+
+    <div id="contenido"></div>
+
+<script>
+var user = localStorage.getItem('username')
+var apellido = localStorage.getItem('apellido')
+var nombre = localStorage.getItem('nombre')
+var token = localStorage.getItem('token')
+var id = localStorage.getItem('id')
+var perfil = document.querySelector('#contenido')
+function pintar(){
+    perfil.innerHTML = ''
+    perfil.innerHTML = `
+    <div class="row">
+    <h3 class="text-center">Perfil</h3>
+      </div>
+      <div class="container">
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${user}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">${apellido} ${nombre}</h6>
+    <p class="card-text">${token}</p>
+    <a href="#" class="card-link">${id}</a>
+  </div>
+</div>
+</div>
+
+`
+}
+
+pintar()
+</script>

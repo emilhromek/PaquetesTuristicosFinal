@@ -1,0 +1,98 @@
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\appsettings.json
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.exe
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.deps.json
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.runtimeconfig.json
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.runtimeconfig.dev.json
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\ref\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.pdb
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.Views.dll
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.Views.pdb
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.AssemblyReference.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.AssemblyInfoInputs.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.AssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.CoreCompileInputs.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorAssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\scopedcss\bundle\MicroservicioFrontend.styles.css
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\staticwebassets\MicroservicioFrontend.StaticWebAssets.Manifest.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.TagHelpers.input.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.TagHelpers.output.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorCoreGenerate.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Destinos.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Paquete.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Reserva.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorTargetAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorTargetAssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.Views.pdb
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\ref\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.pdb
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.genruntimeconfig.cache
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.CopyComplete
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Paquetes.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\frontend-controlador2\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\_ViewStart.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\appsettings.json
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.exe
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.deps.json
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.runtimeconfig.json
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.runtimeconfig.dev.json
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\ref\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.pdb
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.Views.dll
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\bin\Debug\net5.0\MicroservicioFrontend.Views.pdb
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.AssemblyReference.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.AssemblyInfoInputs.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.AssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.CoreCompileInputs.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorAssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\scopedcss\bundle\MicroservicioFrontend.styles.css
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\staticwebassets\MicroservicioFrontend.StaticWebAssets.Manifest.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.TagHelpers.input.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.TagHelpers.output.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorCoreGenerate.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Paquetes.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\_ViewStart.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Destinos.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Paquete.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Home\Reserva.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorTargetAssemblyInfo.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.RazorTargetAssemblyInfo.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.Views.pdb
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\ref\MicroservicioFrontend.dll
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.pdb
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.genruntimeconfig.cache
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\MicroservicioFrontend.csproj.CopyComplete
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Login.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Panel.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Perfil.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Reservas.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Transportes.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Usuarios.cshtml.g.cs
+C:\Users\emil2\OneDrive\Escritorio\Proyecto software - tp integrador\MicroservicioFrontend\MicroservicioFrontend\obj\Debug\net5.0\Razor\Views\Admin\Viajes.cshtml.g.cs
