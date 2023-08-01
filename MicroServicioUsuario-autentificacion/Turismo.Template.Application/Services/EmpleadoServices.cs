@@ -46,7 +46,15 @@ namespace Turismo.Template.Application.Services
 
         public void deleteId(int id)
         {
-            _repository.DeleteBy<Empleado>(id);
+            var e = _repository.FindBy<Empleado>(id);
+            if (e == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            else
+            {
+                _repository.Delete<Empleado>(e);
+            }
         }
 
         public IEnumerable<Empleado> getAll()
@@ -77,27 +85,33 @@ namespace Turismo.Template.Application.Services
         {
             return _query.GetEmpleadoByEmail(email);
         }
-        public EmpleadoDto Update(int id, EmpleadoDto empleado)
+        public EmpleadoDto Update(int id, EmpleadoDto empleadoDto)
         {
+            var empleado = _repository.FindBy<Empleado>(id);
+            if (empleado == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
             var entity = new Empleado
             {
                 EmpleadoId = id,
-                Dni = empleado.Dni,
-                Telefono = empleado.Telefono,
-                FechaNacimiento = empleado.FechaNacimiento,
-                Legajo = empleado.Legajo,
-                Sueldo = empleado.Sueldo,
-                UserId = empleado.UserId
+                Dni = empleadoDto.Dni,
+                Telefono = empleadoDto.Telefono,
+                FechaNacimiento = empleadoDto.FechaNacimiento,
+                Legajo = empleadoDto.Legajo,
+                Sueldo = empleadoDto.Sueldo,
+                UserId = empleadoDto.UserId
             };
             _repository.Update<Empleado>(entity);
             return new EmpleadoDto
             {
-                Dni = empleado.Dni,
-                Telefono = empleado.Telefono,
-                FechaNacimiento = empleado.FechaNacimiento,
-                Legajo = empleado.Legajo,
-                Sueldo = empleado.Sueldo,
-                UserId = empleado.UserId
+                Dni = empleadoDto.Dni,
+                Telefono = empleadoDto.Telefono,
+                FechaNacimiento = empleadoDto.FechaNacimiento,
+                Legajo = empleadoDto.Legajo,
+                Sueldo = empleadoDto.Sueldo,
+                UserId = empleadoDto.UserId
             };
         }
     }

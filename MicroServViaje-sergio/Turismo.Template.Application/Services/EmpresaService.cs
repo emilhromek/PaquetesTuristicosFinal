@@ -65,42 +65,51 @@ namespace Turismo.Template.Application.Services
 
         public void DeleteEmpresaById(int id)
         {
-            repository.DeleteById<Empresa>(id);
+            var check = repository.FindBy<Empresa>(id);
 
-            // borrar todos los buses de la empresa y sus agendas
+            if (check == null)
+                throw new Exception();
 
-            foreach (var bus in repository.Traer<Bus>())
-            {
-                if (bus.EmpresaId == id){
-                    repository.DeleteById<Bus>(bus.BusId);
+            repository.Delete(check);
 
-                    foreach(var agenda in repository.Traer<AgendaBus>())
-                    {
-                        if (agenda.BusId == bus.BusId)
-                        {
-                            repository.DeleteById<AgendaBus>(agenda.Id);
-                        }
-                    }
+            //// borrar todos los buses de la empresa y sus agendas
 
-                    // dejar huerfanos a los viajes de los buses
+            //foreach (var bus in repository.Traer<Bus>())
+            //{
+            //    if (bus.EmpresaId == id){
+            //        repository.DeleteById<Bus>(bus.BusId);
 
-                    foreach (var viaje in repository.Traer<Viaje>())
-                    {
-                        if (viaje.BusId == bus.BusId)
-                        {
-                            viaje.BusId = 0;
+            //        //foreach(var agenda in repository.Traer<AgendaBus>())
+            //        //{
+            //        //    if (agenda.BusId == bus.BusId)
+            //        //    {
+            //        //        repository.DeleteById<AgendaBus>(agenda.Id);
+            //        //    }
+            //        //}
 
-                            repository.Update(viaje);
-                        }
-                    }
-                }
-            }
+            //        // dejar huerfanos a los viajes de los buses
+
+            //        foreach (var viaje in repository.Traer<Viaje>())
+            //        {
+            //            if (viaje.BusId == bus.BusId)
+            //            {
+            //                viaje.BusId = 0;
+
+            //                repository.Update(viaje);
+            //            }
+            //        }
+            //    }
+            //}
 
         }
 
         public EmpresaResponseDTO ActualizarEmpresa(int id, EmpresaDTO empresaDTO)
         {
-            var empresa = new Empresa()
+            var empresa = repository.FindBy<Empresa>(id);
+            if (empresa == null)
+                throw new Exception($"La empresa id:{id} no existe");
+
+            var empresaUpdate = new Empresa()
             {
                 EmpresaId = id,
                 Nombre = empresaDTO.Nombre,

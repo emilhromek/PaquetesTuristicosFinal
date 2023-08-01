@@ -18,11 +18,9 @@ namespace Turismo.Template.Application.Services
     public class RollServices : IRollServices
     {
         private readonly IRepositoryGeneric _repository;
-        private readonly IUserQuery _query;
-        public RollServices(IRepositoryGeneric repository, IUserQuery query)
+        public RollServices(IRepositoryGeneric repository)
         {
             _repository = repository;
-            _query = query;
         }
 
         public IEnumerable<RollDto> getAll()

@@ -71,28 +71,28 @@ namespace Microservicio_Paquetes.Application.Services
 
             var listaReservaExcursion = new List<ReservaExcursion>();
 
-            // Sumar el precio total pasajeros * paquete
+            //// Sumar el precio total pasajeros * paquete
 
-            precioTotalReserva = precioTotalReserva + nuevaReserva.Pasajeros * _queries.EncontrarPor<Paquete>(reserva.PaqueteId).Precio;
+            //precioTotalReserva = precioTotalReserva + nuevaReserva.Pasajeros * _queries.EncontrarPor<Paquete>(reserva.PaqueteId).Precio;
 
-            foreach (int x in reserva.ListaExcursiones)
-            {
-                // Sumar el precio total pasajeros * cada una de las excursiones
+            //foreach (int x in reserva.ListaExcursiones)
+            //{
+            //    // Sumar el precio total pasajeros * cada una de las excursiones
 
-                precioTotalReserva = precioTotalReserva + nuevaReserva.Pasajeros * _queries.EncontrarPor<Excursion>(x).Precio;
+            //    precioTotalReserva = precioTotalReserva + nuevaReserva.Pasajeros * _queries.EncontrarPor<Excursion>(x).Precio;
 
-                ReservaExcursion reservaExcursion = new ReservaExcursion()
-                {
-                    ReservaId = nuevaReserva.Id,
-                    ExcursionId = x,
-                };
+            //    ReservaExcursion reservaExcursion = new ReservaExcursion()
+            //    {
+            //        ReservaId = nuevaReserva.Id,
+            //        ExcursionId = x,
+            //    };
 
-                listaReservaExcursion.Add(reservaExcursion);
-            }
+            //    listaReservaExcursion.Add(reservaExcursion);
+            //}
 
-            nuevaReserva.PrecioTotal = precioTotalReserva;
+            //nuevaReserva.PrecioTotal = precioTotalReserva;
 
-            nuevaReserva.ReservaExcursiones = listaReservaExcursion;
+            //nuevaReserva.ReservaExcursiones = listaReservaExcursion;
 
             _commands.Agregar<Reserva>(nuevaReserva);
 
@@ -280,7 +280,7 @@ namespace Microservicio_Paquetes.Application.Services
 
             return new Response()
             {
-                Code = "UPDATE",
+                Code = "UPDATED",
                 Message = "A la reserva " + ReservaId + " se asignó el estado de pagado: " + pagado,
             };
 
@@ -315,7 +315,7 @@ namespace Microservicio_Paquetes.Application.Services
 
             return new Response()
             {
-                Code = "UPDATE",
+                Code = "UPDATED",
                 Message = "A la reserva " + ReservaId + " se le asignó el grupo " + GrupoId,
             };
 
@@ -350,7 +350,7 @@ namespace Microservicio_Paquetes.Application.Services
 
             return new Response()
             {
-                Code = "UPDATE",
+                Code = "UPDATED",
                 Message = "A la reserva " + ReservaId + " se le eliminó el grupo asignado",
             };
 
@@ -419,7 +419,7 @@ namespace Microservicio_Paquetes.Application.Services
 
             return new Response()
             {
-                Code = "UPDATE",
+                Code = "UPDATED",
                 Message = "A la reserva " + ReservaId + " se le eliminó el viaje asignado",
             };
 

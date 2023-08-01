@@ -51,60 +51,60 @@ namespace Turismo.Template.Application.Services
             // marcar grupo. esto se hace por si hay que actualizar el grupo, la idea es limitar
             // la cantidad de pasajeros que se le puede agregar, en funcion del bus
 
-            var grupo = this.repository.FindBy<Grupo>(viajeDTO.GrupoId);
+            //var grupo = this.repository.FindBy<Grupo>(viajeDTO.GrupoId);
 
-            grupo.BusId = viajeDTO.BusId;
-            grupo.CapacidadDeBus = this.repository.FindBy<Bus>(viajeDTO.BusId).Capacidad;
+            //grupo.BusId = viajeDTO.BusId;
+            //grupo.CapacidadDeBus = this.repository.FindBy<Bus>(viajeDTO.BusId).Capacidad;
 
-            this.repository.Update(grupo);
+            //this.repository.Update(grupo);
 
-            // agregar agenda de chofer 1
+            //// agregar agenda de chofer 1
 
-            var agendaChofer1 = new AgendaChofer()
-            {
-                ChoferId = viajeDTO.Chofer1Id,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaChofer1 = new AgendaChofer()
+            //{
+            //    ChoferId = viajeDTO.Chofer1Id,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaChofer>(agendaChofer1);
+            //this.repository.Add<AgendaChofer>(agendaChofer1);
 
-            // agregar agenda de chofer 2
+            //// agregar agenda de chofer 2
 
-            var agendaChofer2 = new AgendaChofer()
-            {
-                ChoferId = viajeDTO.Chofer2Id,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaChofer2 = new AgendaChofer()
+            //{
+            //    ChoferId = viajeDTO.Chofer2Id,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaChofer>(agendaChofer2);
+            //this.repository.Add<AgendaChofer>(agendaChofer2);
 
-            // agregar agenda de coordinador
+            //// agregar agenda de coordinador
 
-            var agendaCoordinador = new AgendaCoordinador()
-            {
-                CoordinadorId = viajeDTO.CoordinadorId,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaCoordinador = new AgendaCoordinador()
+            //{
+            //    CoordinadorId = viajeDTO.CoordinadorId,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaCoordinador>(agendaCoordinador);
+            //this.repository.Add<AgendaCoordinador>(agendaCoordinador);
 
-            // agregar agenda de coordinador
+            //// agregar agenda de coordinador
 
-            var agendaBus = new AgendaBus()
-            {
-                BusId = viajeDTO.CoordinadorId,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaBus = new AgendaBus()
+            //{
+            //    BusId = viajeDTO.CoordinadorId,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaBus>(agendaBus);
+            //this.repository.Add<AgendaBus>(agendaBus);
 
             return ToViajeResponseDTO(viaje);
         }
@@ -140,86 +140,86 @@ namespace Turismo.Template.Application.Services
 
             this.repository.Update(grupo);
 
-            // borrar agendas previas que estaban marcadas para este viaje
+            //// borrar agendas previas que estaban marcadas para este viaje
 
-            // de choferes
+            //// de choferes
 
-            foreach (var agenda in this.repository.Traer<AgendaChofer>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaChofer>(agenda.Id);
-                }
-            }
+            //foreach (var agenda in this.repository.Traer<AgendaChofer>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaChofer>(agenda.Id);
+            //    }
+            //}
 
-            // de coordinadores
+            //// de coordinadores
 
-            foreach (var agenda in this.repository.Traer<AgendaCoordinador>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaCoordinador>(agenda.Id);
-                }
-            }
+            //foreach (var agenda in this.repository.Traer<AgendaCoordinador>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaCoordinador>(agenda.Id);
+            //    }
+            //}
 
-            // de bus
+            //// de bus
 
-            foreach(var agenda in this.repository.Traer<AgendaBus>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaBus>(agenda.Id);
-                }
-            }
+            //foreach(var agenda in this.repository.Traer<AgendaBus>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaBus>(agenda.Id);
+            //    }
+            //}
 
-            // y ahora si, cargar agendas de nuevo
-            // agregar agenda de chofer 1
+            //// y ahora si, cargar agendas de nuevo
+            //// agregar agenda de chofer 1
 
-            var agendaChofer1 = new AgendaChofer()
-            {
-                ChoferId = viajeDTO.Chofer1Id,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaChofer1 = new AgendaChofer()
+            //{
+            //    ChoferId = viajeDTO.Chofer1Id,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaChofer>(agendaChofer1);
+            //this.repository.Add<AgendaChofer>(agendaChofer1);
 
-            // agregar agenda de chofer 2
+            //// agregar agenda de chofer 2
 
-            var agendaChofer2 = new AgendaChofer()
-            {
-                ChoferId = viajeDTO.Chofer2Id,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaChofer2 = new AgendaChofer()
+            //{
+            //    ChoferId = viajeDTO.Chofer2Id,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaChofer>(agendaChofer2);
+            //this.repository.Add<AgendaChofer>(agendaChofer2);
 
-            // agregar agenda de coordinador
+            //// agregar agenda de coordinador
 
-            var agendaCoordinador = new AgendaCoordinador()
-            {
-                CoordinadorId = viajeDTO.CoordinadorId,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaCoordinador = new AgendaCoordinador()
+            //{
+            //    CoordinadorId = viajeDTO.CoordinadorId,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaCoordinador>(agendaCoordinador);
+            //this.repository.Add<AgendaCoordinador>(agendaCoordinador);
 
-            // agregar agenda de coordinador
+            //// agregar agenda de coordinador
 
-            var agendaBus = new AgendaBus()
-            {
-                BusId = viajeDTO.CoordinadorId,
-                FechaInicial = viajeDTO.FechaSalida,
-                FechaFinal = viajeDTO.FechaLlegada,
-                ViajeId = viaje.ViajeId,
-            };
+            //var agendaBus = new AgendaBus()
+            //{
+            //    BusId = viajeDTO.CoordinadorId,
+            //    FechaInicial = viajeDTO.FechaSalida,
+            //    FechaFinal = viajeDTO.FechaLlegada,
+            //    ViajeId = viaje.ViajeId,
+            //};
 
-            this.repository.Add<AgendaBus>(agendaBus);
+            //this.repository.Add<AgendaBus>(agendaBus);
 
             return ToViajeResponseDTO(viaje);
         }
@@ -402,35 +402,35 @@ namespace Turismo.Template.Application.Services
         {
             // borrar agenda de choferes
 
-            foreach (var agenda in this.repository.Traer<AgendaChofer>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaChofer>(agenda.Id);
-                }
-            }
+            //foreach (var agenda in this.repository.Traer<AgendaChofer>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaChofer>(agenda.Id);
+            //    }
+            //}
 
             // borrar agenda de coordinador
 
-            foreach (var agenda in this.repository.Traer<AgendaCoordinador>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaCoordinador>(agenda.Id);
-                    break; // ya que solo hay un coordinador asignado al viaje
-                }
-            }
+            //foreach (var agenda in this.repository.Traer<AgendaCoordinador>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaCoordinador>(agenda.Id);
+            //        break; // ya que solo hay un coordinador asignado al viaje
+            //    }
+            //}
 
             // borrar agenda de bus
 
-            foreach (var agenda in this.repository.Traer<AgendaBus>())
-            {
-                if (agenda.ViajeId == id)
-                {
-                    this.repository.DeleteById<AgendaBus>(agenda.Id);
-                    break; // ya que solo hay un bus asignado al viaje
-                }
-            }
+            //foreach (var agenda in this.repository.Traer<AgendaBus>())
+            //{
+            //    if (agenda.ViajeId == id)
+            //    {
+            //        this.repository.DeleteById<AgendaBus>(agenda.Id);
+            //        break; // ya que solo hay un bus asignado al viaje
+            //    }
+            //}
 
             // si el viaje tiene un grupo asignado, quitarlo
 

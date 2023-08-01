@@ -49,25 +49,16 @@ namespace Microservicio_Paquetes.Application.Services
                 };
             }
 
-            if (excursion.Titulo.Length > 50)
-            {
-                return new Response()
-                {
-                    Code = "BAD_REQUEST",
-                    Message = "El nombre de la excursión supera los 50 caracteres.",
-                };
-            }
+            //Destino getDestino = _queries.EncontrarPor<Destino>(excursion.DestinoId);
 
-            Destino getDestino = _queries.EncontrarPor<Destino>(excursion.DestinoId);
-
-            if (getDestino == null)
-            {
-                return new Response()
-                {
-                    Code = "BAD_REQUEST",
-                    Message = "Destino con el id: " + excursion.DestinoId + " no existe."
-                };
-            }
+            //if (getDestino == null)
+            //{
+            //    return new Response()
+            //    {
+            //        Code = "BAD_REQUEST",
+            //        Message = "Destino con el id: " + excursion.DestinoId + " no existe."
+            //    };
+            //}
 
             Excursion nuevaExcursion = new Excursion()
             {
@@ -218,18 +209,27 @@ namespace Microservicio_Paquetes.Application.Services
 
         public Response ActualizarExcursion(int id, ExcursionDto excursionDTO)
         {
-            Destino getDestino = _queries.EncontrarPor<Destino>(excursionDTO.DestinoId);
+            //Destino getDestino = _queries.EncontrarPor<Destino>(excursionDTO.DestinoId);
 
-            if (getDestino == null)
+            //if (getDestino == null)
+            //{
+            //    return new Response()
+            //    {
+            //        Code = "BAD_REQUEST",
+            //        Message = "Destino con el id: " + excursionDTO.DestinoId + " no existe."
+            //    };
+            //}
+
+            var excursion = _queries.EncontrarPor<Excursion>(id);
+
+            if (excursion == null)
             {
                 return new Response()
                 {
-                    Code = "BAD_REQUEST",
-                    Message = "Destino con el id: " + excursionDTO.DestinoId + " no existe."
+                    Code = "NOT_FOUND",
+                    Message = "Excursion con el id: " + id + " no existe."
                 };
             }
-
-            var excursion = _queries.EncontrarPor<Excursion>(id);
 
             excursion.Titulo = excursionDTO.Titulo;
             excursion.Descripcion = excursionDTO.Descripcion;
@@ -258,7 +258,7 @@ namespace Microservicio_Paquetes.Application.Services
                 };
             }
 
-            _commands.BorrarPor<Excursion>(id);
+            _commands.Borrar<Excursion>(check);
 
             return new Response()
             {

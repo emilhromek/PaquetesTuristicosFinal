@@ -44,7 +44,15 @@ namespace Turismo.Template.Application.Services
 
         public void deleteId(int id)
         {
-            _repository.DeleteBy<Pasajero>(id);
+            var p = _repository.FindBy<Pasajero>(id);
+            if (p == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            else
+            {
+                _repository.Delete<Pasajero>(p);
+            }
         }
 
         public IEnumerable<Pasajero> getAll()
@@ -74,23 +82,29 @@ namespace Turismo.Template.Application.Services
         {
             return _query.GetPasajeroByEmail(email);
         }
-        public PasajeroDto Update(int id, PasajeroDto pasajero)
+        public PasajeroDto Update(int id, PasajeroDto pasajeroDto)
         {
+            var pasajero = _repository.FindBy<Pasajero>(id);
+            if (pasajero == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
             var entity = new Pasajero
             {
                 PasajeroId = id,
-                Dni = pasajero.Dni,
-                Telefono = pasajero.Telefono,
-                FechaNacimiento = pasajero.FechaNacimiento,
-                UserId = pasajero.UserId
+                Dni = pasajeroDto.Dni,
+                Telefono = pasajeroDto.Telefono,
+                FechaNacimiento = pasajeroDto.FechaNacimiento,
+                UserId = pasajeroDto.UserId
             };
             _repository.Update<Pasajero>(entity);
             return new PasajeroDto
             {
-                Dni = pasajero.Dni,
-                Telefono = pasajero.Telefono,
-                FechaNacimiento = pasajero.FechaNacimiento,
-                UserId = pasajero.UserId
+                Dni = pasajeroDto.Dni,
+                Telefono = pasajeroDto.Telefono,
+                FechaNacimiento = pasajeroDto.FechaNacimiento,
+                UserId = pasajeroDto.UserId
             };
         }
     }

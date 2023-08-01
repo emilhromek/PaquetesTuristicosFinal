@@ -2,7 +2,57 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+        <h1>Reserva</h1>
+      </div>
+    <!-- formulario  -->
+    <div class="container">
+        <form id="reservaForm" class="row g-3">
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="col-md-6">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre" required>
+              </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" name="apellido" required>
+            </div>
+            <div class="col-md-4">
+                <label for="dni" class="form-label">Dni</label>
+                <input type="number" class="form-control" name="dni" required>
+              </div>
+            <div class="col-md-4">
+                <label for="telefono" class="form-label">Telfono</label>
+                <input type="number" class="form-control" name="telefono" required>
+            </div>
+            <div class="col-md-4">
+                <label for="FechaNacimiento" class="form-label">FechaNacimiento</label>
+                <input type="date" class="form-control" value="1990-01-31" min="1890-01-31" max="2002-01-31" name="fechaNacimiento" required>
+            </div>
+            <div class="col-12">
+              <label for="direccion" class="form-label">Direccion</label>
+              <input type="text" class="form-control" name="direccion" placeholder="calle y altura">
+            </div>
+            <h5 id="reservaPaquete">Indica el total de pasajeros para reservar </h5>
+            <div class="col-md-2">
+              <label for="cantPasajeros" class="form-label">Pasajeros</label>
+              <input type="number" class="form-control" value=1 min=1 max=8 name="cantidadPas" required>
+            </div>
+
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary">Reservar</button>
+            </div>
+          </form>
+    </div>
+    <br>
+<div class="container">
+    <h3>Detalles</h3>
+    <p>La factura sera enviada al mail ingresado.</p>
 </div>

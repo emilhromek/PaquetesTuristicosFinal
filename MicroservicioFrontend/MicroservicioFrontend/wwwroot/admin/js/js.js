@@ -9,14 +9,14 @@ var pagina = "../"
 
 
 function login(){
-    window.location.href = 'admin/login.html'
+    window.location.href = 'admin/login'
 }
 // validacion de login 
 function validarLogin(){
     if(localStorage.getItem('token') != null ){
         console.log(localStorage.getItem('token'))
     }else{
-        window.location.href = 'login.html'
+        window.location.href = 'Login'
     }
 }
 validarLogin()

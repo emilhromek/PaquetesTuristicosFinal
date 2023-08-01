@@ -41,6 +41,11 @@ namespace Turismo.Template.Application.Services
 
         public TerminalResponseDTO ActualizarTerminal(int id, TerminalDTO terminalDTO)
         {
+            var check = repository.FindBy<Terminal>(id);
+
+            if (check == null)
+                throw new Exception();
+
             var terminal = new Terminal()
             {
                 TerminalId = id,
@@ -55,7 +60,12 @@ namespace Turismo.Template.Application.Services
 
         public void DeleteTerminalById(int id)
         {
-            repository.DeleteById<Terminal>(id);
+            var check = repository.FindBy<Terminal>(id);
+
+            if (check == null)
+                throw new Exception();
+
+            repository.Delete(check);
         }
 
         //public List<TerminalCompletaDTO> GetCompleto()

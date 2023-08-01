@@ -34,11 +34,11 @@ namespace Microservicio_Paquetes.Application.Services
         {
             Destino getDestino = _queries.EncontrarPor<Destino>(hotel.DestinoId);
 
-            if (getDestino == null)
+           if (getDestino == null)
             {
                 return new Response()
                 {
-                    Code = "BAD_REQUEST",
+                    Code = "BAD_REQUEST", 
                     Message = "Destino con el id: " + hotel.DestinoId + " no existe."
                 };
             }
@@ -220,6 +220,15 @@ namespace Microservicio_Paquetes.Application.Services
 
             var hotel = _queries.EncontrarPor<Hotel>(id);
 
+            if (hotel == null)
+            {
+                return new Response()
+                {
+                    Code = "NOT_FOUND",
+                    Message = "Hotel con el id: " + id + " no existe."
+                };
+            }
+
             hotel.Marca = hotelDTO.Marca;
             hotel.Sucursal = hotelDTO.Sucursal;
             hotel.Estrellas = hotelDTO.Estrellas;
@@ -230,7 +239,7 @@ namespace Microservicio_Paquetes.Application.Services
 
             return new Response()
             {
-                Code = "UPDATE",
+                Code = "UPDATED",
                 Message = "Hotel con el id: " + hotel.Id + ", marca: " + hotel.Marca + " y sucursal: " + hotel.Sucursal + " actualizado."
             };
         }

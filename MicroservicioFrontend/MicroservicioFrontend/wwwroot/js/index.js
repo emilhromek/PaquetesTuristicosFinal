@@ -34,6 +34,8 @@ prom.then(res => {
     renderizarPaquetes(json);
 });
 
+renderInformacionDeUsuario()
+
 function renderizarPaquetes(paquetes){
     let contenedor = document.getElementById("contenedorPaquetes");
     for(let i=0; i < paquetes.length; i++) {
@@ -52,8 +54,8 @@ function renderizarPaquetes(paquetes){
           <li class="list-group-item" style="color: brown">Descuento ${paquete.descuento}%</li>
         </ul>
         <div class="card-body">
-          <a class="card-link" href="paquete.html?paqueteId=${paquete.id}">Mas información</a>
-          <a class="card-link" href="reserva.html?paqueteId=${paquete.id}&nombrePaquete=${paquete.nombre}">Reservar YA</a>
+          <a class="card-link" href="https://localhost:44327/Home/PaqueteInfo?paqueteId=${paquete.id}">Mas información</a>
+          <a class="card-link" href="https://localhost:44327/Home/Reserva?paqueteId=${paquete.id}&nombrePaquete=${paquete.nombre}">Reservar YA</a>
         </div>
       </div>`
     };
@@ -71,5 +73,23 @@ function RedesSociales(event){
 }
 function login(){
   // window.location.href = "http://localhost/paquetes/Frontend/admin/login.html";
-  window.location.href = "admin/login.html";
+  window.location.href = "Home/Login";
+}
+
+//renderizar seccion de login-usuario
+
+function renderInformacionDeUsuario() {
+    let usuario = document.getElementById("infoUsuario");
+    if (!(typeof localStorage.getItem('nombre') !== 'undefined' && localStorage.getItem('nombre') !== null)) {
+        usuario.innerHTML = `<a href='#'>Iniciar sesion</a>`
+    }    
+
+    else {
+        var nombre = localStorage.getItem('nombre')
+        usuario.innerHTML = `<a href='#'>${nombre} - Cerrar sesion</a>`
+    }
+        
+        
+
+    
 }

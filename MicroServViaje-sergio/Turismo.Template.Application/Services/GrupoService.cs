@@ -19,15 +19,15 @@ namespace Turismo.Template.Application.Services
         }
         public GrupoResponseDTO AddGrupo(GrupoDTO grupoDTO)
         {
-            if (grupoDTO.BusId != 0 && grupoDTO.TotalPasajeros > repository.FindBy<Bus>(grupoDTO.BusId).Capacidad)
-            {
-                throw new Exception($"Este grupo tiene un bus asignado, se esta superando la capacidad");
-            }
+            //if (grupoDTO.BusId != 0 && grupoDTO.TotalPasajeros > repository.FindBy<Bus>(grupoDTO.BusId).Capacidad)
+            //{
+            //    throw new Exception($"Este grupo tiene un bus asignado, se esta superando la capacidad");
+            //}
 
-            if (grupoDTO.TotalPasajeros > 100)
-            {
-                throw new Exception($"El grupo no puede tener mas de 100 pasajeros, es es el limite maximo permitido");
-            }
+            //if (grupoDTO.TotalPasajeros > 100)
+            //{
+            //    throw new Exception($"El grupo no puede tener mas de 100 pasajeros, es es el limite maximo permitido");
+            //}
 
             var grupo = new Grupo()
             {
@@ -50,7 +50,12 @@ namespace Turismo.Template.Application.Services
 
         public void DeleteGrupoById(int id)
         {
-            this.Repository.DeleteById<Grupo>(id);
+            var check = repository.FindBy<Grupo>(id);
+
+            if (check == null)
+                throw new Exception();
+
+            repository.Delete(check);
         }
 
         public List<GrupoResponseDTO> GetAll()

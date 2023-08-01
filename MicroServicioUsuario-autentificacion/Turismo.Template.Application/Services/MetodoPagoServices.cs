@@ -36,8 +36,16 @@ namespace Turismo.Template.Application.Services
 
         public void deleteId(int id)
         {
-            _repository.DeleteBy<MetodoPago>(id);
-        
+            var m = _repository.FindBy<MetodoPago>(id);
+            if (m == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            else
+            {
+                _repository.Delete<MetodoPago>(m);
+            }
+
         }
 
         public IEnumerable<MetodoPagoDtoById> getAll()

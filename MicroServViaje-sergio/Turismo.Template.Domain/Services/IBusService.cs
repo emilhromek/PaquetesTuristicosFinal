@@ -16,15 +16,15 @@ namespace Turismo.Template.Domain.Services
         BusResponseDTO AddBus(BusDTO busDTO);
         BusResponseDTO GetBusById(int id);
         List<BusResponseDTO> GetAll();
-        public List<BusResponseDTO> GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal);
+        //public List<BusResponseDTO> GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal);
         public BusResponseDTO ActualizarBus(int id, BusDTO busDTO);
         //Task<ViajeConBusTodoDTO> GetByIdConEmpresa(int id);
-        public AgendaBusDTO agregarAgenda(AgendaBusDTO agendaDTO);
-        public List<AgendaBusResponseDTO> retornarAgenda(int BusId);
-        public List<AgendaBusResponseConFormatoDTO> retornarAgendaConFormato(int BusId);
-        public bool checkSiFechaEstaOcupada(int BusId, DateTime fecha);
-        public AgendaBusResponseDTO retornarAgendaDeEsosDias(int BusId, DateTime fecha);
-        public void vaciarAgendaDeBus(int BusId);
-        public void eliminarAgendaSegunViajeId(int BusId, int viajeId);
+        //public AgendaBusDTO agregarAgenda(AgendaBusDTO agendaDTO);
+        //public List<AgendaBusResponseDTO> retornarAgenda(int BusId);
+        //public List<AgendaBusResponseConFormatoDTO> retornarAgendaConFormato(int BusId);
+        //public bool checkSiFechaEstaOcupada(int BusId, DateTime fecha);
+        //public AgendaBusResponseDTO retornarAgendaDeEsosDias(int BusId, DateTime fecha);
+        //public void vaciarAgendaDeBus(int BusId);
+        //public void eliminarAgendaSegunViajeId(int BusId, int viajeId);
     }
 }

@@ -15,12 +15,35 @@ prom.then(res => {
     renderizarDestinos(json);
 });
 
+
 function renderizarDestinos(destinos){
     let contenedor = document.getElementById("contenedorDestinos");
     for(let i=0; i < destinos.length; i++) {
         destino = destinos[i];
         contenedor.innerHTML +=
         `<div class="card mt-4 paquete" style="width: 18rem;">
+        <img src="${destino.imagen}" class="card-img-top" alt="Img destino...">
+        <div class="card-body">
+          <h5 class="card-title">${destino.lugar}</h5>
+          <p class="card-text">${destino.descripcion}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">${destino.atractivo}</li>
+          <li class="list-group-item">${destino.historia}</li>
+        </ul>
+        <div class="card-body">
+          <a href="PaquetesPorDestino?destinoId=${destino.id}" class="card-link">Paquetes</>
+        </div>
+      </div>`
+    };
+};
+
+function renderizarComentarios(destinoId) {
+    let contenedor = document.getElementById("contenedorComentarios");
+    for (let i = 0; i < destinos.length; i++) {
+        destino = destinos[i];
+        contenedor.innerHTML +=
+            `<div class="card mt-4 paquete" style="width: 18rem;">
         <img src="${destino.imagen}" class="card-img-top" alt="Img destino...">
         <div class="card-body">
           <h5 class="card-title">${destino.lugar}</h5>

@@ -31,14 +31,14 @@ namespace Microservicio_Paquetes.Application.Services
         public Response PostPaquete(PaqueteDto paquete)
         {
 
-            if (paquete.Descuento >= 100 && paquete.Descuento < 0)
-            {
-                return new Response()
-                {
-                    Code = "BAD_REQUEST",
-                    Message = "El descuento tiene que estar entre 0 y 99."
-                };
-            }
+            //if (paquete.Descuento >= 100 || paquete.Descuento < 0)
+            //{
+            //    return new Response()
+            //    {
+            //        Code = "BAD_REQUEST",
+            //        Message = "El descuento tiene que estar entre 0 y 99."
+            //    };
+            //}
 
 
             Destino getDestino = _queries.EncontrarPor<Destino>(paquete.DestinoId);
@@ -52,28 +52,28 @@ namespace Microservicio_Paquetes.Application.Services
                 };
             }
 
-            // check excursiones
+            //// check excursiones
 
-            if (paquete.Excursiones.Count != 0)
-            {
-                foreach (int x in paquete.Excursiones)
-                {
-                    var excursionCheck = _queries.EncontrarPor<Excursion>(x);
+            //if (paquete.Excursiones.Count != 0)
+            //{
+            //    foreach (int x in paquete.Excursiones)
+            //    {
+            //        var excursionCheck = _queries.EncontrarPor<Excursion>(x);
 
-                    if (excursionCheck.DestinoId != paquete.DestinoId)
-                    {
-                        return new Response()
-                        {
-                            Code = "BAD_REQUEST",
-                            Message = "Las excursiones ingresadas para el paquete no coinciden con el destino. Eso pasa por no usar el front."
-                        };
-                    }
-                }
-            }
-            else
-            {
+            //        if (excursionCheck.DestinoId != paquete.DestinoId)
+            //        {
+            //            return new Response()
+            //            {
+            //                Code = "BAD_REQUEST",
+            //                Message = "Las excursiones ingresadas para el paquete no coinciden con el destino. Eso pasa por no usar el front."
+            //            };
+            //        }
+            //    }
+            //}
+            //else
+            //{
 
-            }
+            //}
 
             Paquete paqueteNuevo = new Paquete()
             {
@@ -96,16 +96,16 @@ namespace Microservicio_Paquetes.Application.Services
 
             _commands.Agregar<Paquete>(paqueteNuevo);
 
-            foreach (int x in paquete.Excursiones)
-            {
-                PaqueteExcursion paqueteExcursion = new PaqueteExcursion()
-                {
-                    PaqueteId = paqueteNuevo.Id,
-                    ExcursionId = x,
-                };
+            //foreach (int x in paquete.Excursiones)
+            //{
+            //    PaqueteExcursion paqueteExcursion = new PaqueteExcursion()
+            //    {
+            //        PaqueteId = paqueteNuevo.Id,
+            //        ExcursionId = x,
+            //    };
 
-                _commands.Agregar<PaqueteExcursion>(paqueteExcursion);
-            }
+            //    _commands.Agregar<PaqueteExcursion>(paqueteExcursion);
+            //}
 
             return new Response()
             {
@@ -281,7 +281,7 @@ namespace Microservicio_Paquetes.Application.Services
                 };
             }
 
-            _commands.BorrarPor<Paquete>(paqueteId);
+            _commands.Borrar<Paquete>(paquete);
 
             // hay que borrar todas las tablas PaqueteExcursion y a las reservas marcarlas como huerfanas
             // tambien que borrar todos los grupos y viajes asociados

@@ -164,7 +164,7 @@ namespace Microservicio_Paquetes.Application.Services
                 };
             }
 
-            _commands.BorrarPor<Destino>(destinoId);
+            _commands.Borrar<Destino>(check);
 
             // ok, este es el mas complicado de todos. al borrar un destino, hay que borrar tambien
             // todos los hoteles asociados
@@ -173,64 +173,64 @@ namespace Microservicio_Paquetes.Application.Services
             // hay que dejar huerfanas a las reservas
             // ademas hay que borrar todos los grupos y viajes
 
-            // borramos hoteles:
+            //// borramos hoteles:
 
-            foreach(var hotel in _queries.Traer<Hotel>())
-            {
-                if (hotel.DestinoId == destinoId)
-                {
-                    _commands.Borrar(hotel);
-                }
-            }
+            //foreach(var hotel in _queries.Traer<Hotel>())
+            //{
+            //    if (hotel.DestinoId == destinoId)
+            //    {
+            //        _commands.Borrar(hotel);
+            //    }
+            //}
 
-            // borramos excursiones
+            //// borramos excursiones
 
-            foreach (var excursion in _queries.Traer<Excursion>())
-            {
-                if (excursion.DestinoId == destinoId)
-                {
-                    _commands.Borrar(excursion);
-                }
-            }
+            //foreach (var excursion in _queries.Traer<Excursion>())
+            //{
+            //    if (excursion.DestinoId == destinoId)
+            //    {
+            //        _commands.Borrar(excursion);
+            //    }
+            //}
 
-            // borramos paquetes y paqueteexcursion
+            //// borramos paquetes y paqueteexcursion
 
-            foreach (var paquete in _queries.Traer<Paquete>())
-            {
-                if (paquete.DestinoId == destinoId)
-                {
-                    _commands.Borrar(paquete);
+            //foreach (var paquete in _queries.Traer<Paquete>())
+            //{
+            //    if (paquete.DestinoId == destinoId)
+            //    {
+            //        _commands.Borrar(paquete);
 
-                    foreach (var paqueteExcursion in _queries.Traer<PaqueteExcursion>())
-                    {
-                        if (paqueteExcursion.PaqueteId == paquete.Id)
-                        {
-                            _commands.Borrar(paqueteExcursion);
-                        }
-                    }
+            //        foreach (var paqueteExcursion in _queries.Traer<PaqueteExcursion>())
+            //        {
+            //            if (paqueteExcursion.PaqueteId == paquete.Id)
+            //            {
+            //                _commands.Borrar(paqueteExcursion);
+            //            }
+            //        }
 
-                }
-            }
+            //    }
+            //}
 
-            // falta marca reservas y borrar grupos y viajes
+            //// falta marca reservas y borrar grupos y viajes
 
-            foreach (var reserva in _queries.Traer<Reserva>())
-            {
-                var destinoDeReserva = _queries.EncontrarPor<Paquete>(reserva.PaqueteId).DestinoId;
+            //foreach (var reserva in _queries.Traer<Reserva>())
+            //{
+            //    var destinoDeReserva = _queries.EncontrarPor<Paquete>(reserva.PaqueteId).DestinoId;
 
-                if (destinoDeReserva == destinoId)
-                {
-                    reserva.PaqueteId = 0;
-                    reserva.GrupoId = 0;
-                    reserva.ViajeId = 0;
+            //    if (destinoDeReserva == destinoId)
+            //    {
+            //        reserva.PaqueteId = 0;
+            //        reserva.GrupoId = 0;
+            //        reserva.ViajeId = 0;
 
-                    // faltaria alguna anotacion para dejar en claro los detalles del paquete borrado
+            //        // faltaria alguna anotacion para dejar en claro los detalles del paquete borrado
 
-                    _commands.Actualizar<Reserva>(reserva);
+            //        _commands.Actualizar<Reserva>(reserva);
 
-                    // no olvidar borrar todos los grupos y viajes asociados al paquete
-                }
-            }
+            //        // no olvidar borrar todos los grupos y viajes asociados al paquete
+            //    }
+            //}
 
 
 

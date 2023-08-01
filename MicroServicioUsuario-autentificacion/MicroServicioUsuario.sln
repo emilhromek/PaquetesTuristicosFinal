@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30517.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turismo.Template.API", "Turismo.Template.API\Turismo.Template.API.csproj", "{81850EB7-9D3A-432C-9ED0-D7EB5B13BE0B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turismo.Template.Domain", "Turismo.Template.Domain\Turismo.Template.Domain.csproj", "{119383AA-4550-4135-9D16-FC11B2B7E422}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turismo.Template.AccessData", "Turismo.Template.AccessData\Turismo.Template.AccessData.csproj", "{82ECE282-D10A-45E1-92AD-D92F33A97A5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{3BBAAB74-E49F-463E-A00C-2B07AC03558D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{82ECE282-D10A-45E1-92AD-D92F33A97A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82ECE282-D10A-45E1-92AD-D92F33A97A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82ECE282-D10A-45E1-92AD-D92F33A97A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBAAB74-E49F-463E-A00C-2B07AC03558D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBAAB74-E49F-463E-A00C-2B07AC03558D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBAAB74-E49F-463E-A00C-2B07AC03558D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBAAB74-E49F-463E-A00C-2B07AC03558D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

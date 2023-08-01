@@ -63,36 +63,41 @@ namespace Turismo.Template.Application.Services
 
         public void DeleteChoferById(int choferId)
         {
-            this.Repository.DeleteById<Chofer>(choferId);
+            var check = repository.FindBy<Chofer>(choferId);
 
-            // borrar toda la agenda
+            if (check == null)
+                throw new Exception();
 
-            foreach (var agenda in this.repository.Traer<AgendaChofer>())
-            {
-                if (agenda.ChoferId == choferId)
-                {
-                    this.repository.Delete(agenda);
-                }
-            }
+            repository.Delete(check);
 
-            // dejar sin chofer a todos los viajes asociados
+            //// borrar toda la agenda
 
-            foreach (var viaje in this.repository.Traer<Viaje>())
-            {
-                if (viaje.Chofer1Id == choferId)
-                {
-                    viaje.Chofer1Id = 0;
+            //foreach (var agenda in this.repository.Traer<AgendaChofer>())
+            //{
+            //    if (agenda.ChoferId == choferId)
+            //    {
+            //        this.repository.Delete(agenda);
+            //    }
+            //}
 
-                    this.repository.Update(viaje);
-                }
+            //// dejar sin chofer a todos los viajes asociados
 
-                if (viaje.Chofer2Id == choferId)
-                {
-                    viaje.Chofer2Id = 0;
+            //foreach (var viaje in this.repository.Traer<Viaje>())
+            //{
+            //    if (viaje.Chofer1Id == choferId)
+            //    {
+            //        viaje.Chofer1Id = 0;
 
-                    this.repository.Update(viaje);
-                }
-            }
+            //        this.repository.Update(viaje);
+            //    }
+
+            //    if (viaje.Chofer2Id == choferId)
+            //    {
+            //        viaje.Chofer2Id = 0;
+
+            //        this.repository.Update(viaje);
+            //    }
+            //}
         }
 
         public ChoferResponseDTO GetChoferById(int id)
@@ -114,21 +119,21 @@ namespace Turismo.Template.Application.Services
             return lista_chofer;
         }
 
-        public List<ChoferResponseDTO> GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal)
-        {
-            var lista_chofer = new List<ChoferResponseDTO>();
-            var choferes = repository.Traer<Chofer>().ToList();
+        //public List<ChoferResponseDTO> GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal)
+        //{
+        //    var lista_chofer = new List<ChoferResponseDTO>();
+        //    var choferes = repository.Traer<Chofer>().ToList();
 
-            foreach (var chofer in choferes)
-            {
-                if (checkSiRangoFechaEstaOcupada(chofer.ChoferId, fechaInicial, fechaFinal) == false)
-                {
-                    lista_chofer.Add(ToChoferResponseDTO(chofer));
-                }
+        //    foreach (var chofer in choferes)
+        //    {
+        //        if (checkSiRangoFechaEstaOcupada(chofer.ChoferId, fechaInicial, fechaFinal) == false)
+        //        {
+        //            lista_chofer.Add(ToChoferResponseDTO(chofer));
+        //        }
                 
-            }
-            return lista_chofer;
-        }
+        //    }
+        //    return lista_chofer;
+        //}
 
         public ChoferResponseDTO ToChoferResponseDTO(Chofer chofer)
         {
@@ -145,149 +150,149 @@ namespace Turismo.Template.Application.Services
             };
         }
 
-        public AgendaChoferDTO agregarAgenda(AgendaChoferDTO agendaDTO) // agrega una agenda para un chofer, especificando chofer id, fecha inicial y final
-        {
-            var agenda = new AgendaChofer()
-            {
-                ChoferId = agendaDTO.ChoferId,
-                FechaInicial = agendaDTO.FechaInicial,
-                FechaFinal = agendaDTO.FechaFinal,
-                ViajeId = agendaDTO.ViajeId,
-            };
+        //public AgendaChoferDTO agregarAgenda(AgendaChoferDTO agendaDTO) // agrega una agenda para un chofer, especificando chofer id, fecha inicial y final
+        //{
+        //    var agenda = new AgendaChofer()
+        //    {
+        //        ChoferId = agendaDTO.ChoferId,
+        //        FechaInicial = agendaDTO.FechaInicial,
+        //        FechaFinal = agendaDTO.FechaFinal,
+        //        ViajeId = agendaDTO.ViajeId,
+        //    };
 
-            this.repository.Add<AgendaChofer>(agenda);
+        //    this.repository.Add<AgendaChofer>(agenda);
 
-            return agendaDTO;
-        }
-        public List<AgendaChoferResponseDTO> retornarAgenda(int ChoferId) // retornar toda la agenda de un chofer, segun choferid
-        {
-            var lista = this.repository.Traer<AgendaChofer>();
+        //    return agendaDTO;
+        //}
+        //public List<AgendaChoferResponseDTO> retornarAgenda(int ChoferId) // retornar toda la agenda de un chofer, segun choferid
+        //{
+        //    var lista = this.repository.Traer<AgendaChofer>();
 
-            var listaOutput = new List<AgendaChoferResponseDTO>();
+        //    var listaOutput = new List<AgendaChoferResponseDTO>();
 
-            foreach (var x in lista)
-            {
-                if (x.ChoferId == ChoferId)
-                {
-                    var agenda = new AgendaChoferResponseDTO()
-                    {
-                        Id = x.Id,
-                        ChoferId = x.ChoferId,
-                        FechaInicial = x.FechaInicial,
-                        FechaFinal = x.FechaFinal,
-                        ViajeId = x.ViajeId,
-                    };
+        //    foreach (var x in lista)
+        //    {
+        //        if (x.ChoferId == ChoferId)
+        //        {
+        //            var agenda = new AgendaChoferResponseDTO()
+        //            {
+        //                Id = x.Id,
+        //                ChoferId = x.ChoferId,
+        //                FechaInicial = x.FechaInicial,
+        //                FechaFinal = x.FechaFinal,
+        //                ViajeId = x.ViajeId,
+        //            };
 
-                    listaOutput.Add(agenda);
-                }
-            }
-            return listaOutput;
-        }
+        //            listaOutput.Add(agenda);
+        //        }
+        //    }
+        //    return listaOutput;
+        //}
 
-        public List<AgendaChoferResponseConFormatoDTO> retornarAgendaConFormato(int ChoferId) // retornar toda la agenda de un chofer, segun choferid
-        {
-            var lista = this.repository.Traer<AgendaChofer>();
+        //public List<AgendaChoferResponseConFormatoDTO> retornarAgendaConFormato(int ChoferId) // retornar toda la agenda de un chofer, segun choferid
+        //{
+        //    var lista = this.repository.Traer<AgendaChofer>();
 
-            var listaOutput = new List<AgendaChoferResponseConFormatoDTO>();
+        //    var listaOutput = new List<AgendaChoferResponseConFormatoDTO>();
 
-            foreach (var x in lista)
-            {
-                if (x.ChoferId == ChoferId)
-                {
-                    var agenda = new AgendaChoferResponseConFormatoDTO()
-                    {
-                        Id = x.Id,
-                        ChoferId = x.ChoferId,
-                        FechaInicial = x.FechaInicial.ToShortDateString(),
-                        FechaFinal = x.FechaFinal.ToShortDateString(),
-                        ViajeId = x.ViajeId,
-                    };
+        //    foreach (var x in lista)
+        //    {
+        //        if (x.ChoferId == ChoferId)
+        //        {
+        //            var agenda = new AgendaChoferResponseConFormatoDTO()
+        //            {
+        //                Id = x.Id,
+        //                ChoferId = x.ChoferId,
+        //                FechaInicial = x.FechaInicial.ToShortDateString(),
+        //                FechaFinal = x.FechaFinal.ToShortDateString(),
+        //                ViajeId = x.ViajeId,
+        //            };
 
-                    listaOutput.Add(agenda);
-                }
-            }
-            return listaOutput;
-        }
+        //            listaOutput.Add(agenda);
+        //        }
+        //    }
+        //    return listaOutput;
+        //}
 
-        public bool checkSiFechaEstaOcupada(int choferId, DateTime fecha) // chequea si para una fecha concreta, el chofer esta ocupado
-        {
-            var lista = retornarAgenda(choferId);
+        //public bool checkSiFechaEstaOcupada(int choferId, DateTime fecha) // chequea si para una fecha concreta, el chofer esta ocupado
+        //{
+        //    var lista = retornarAgenda(choferId);
 
-            foreach (var x in lista)
-            {
-                if (fecha <= x.FechaFinal && fecha >= x.FechaInicial)
-                {
-                    return true;
-                }
-                break;
-            }
+        //    foreach (var x in lista)
+        //    {
+        //        if (fecha <= x.FechaFinal && fecha >= x.FechaInicial)
+        //        {
+        //            return true;
+        //        }
+        //        break;
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
 
-        public bool checkSiRangoFechaEstaOcupada(int choferId, DateTime fechaInicial, DateTime fechaFinal) // chequea si para una fecha concreta, el chofer esta ocupado
-        {
-            var lista = retornarAgenda(choferId);
+        //public bool checkSiRangoFechaEstaOcupada(int choferId, DateTime fechaInicial, DateTime fechaFinal) // chequea si para una fecha concreta, el chofer esta ocupado
+        //{
+        //    var lista = retornarAgenda(choferId);
 
-            bool check1 = checkSiFechaEstaOcupada(choferId, fechaInicial); // check fecha inicial
+        //    bool check1 = checkSiFechaEstaOcupada(choferId, fechaInicial); // check fecha inicial
 
-            bool check2 = checkSiFechaEstaOcupada(choferId, fechaInicial); // check fecha final
+        //    bool check2 = checkSiFechaEstaOcupada(choferId, fechaInicial); // check fecha final
 
-            bool check3 = false;
+        //    bool check3 = false;
 
-            foreach (var x in lista) // check que el rango no tenga ninguna ocupacion intermedia
-            {
-                if (x.FechaInicial >= fechaInicial && x.FechaFinal <= fechaFinal)
-                {
-                    check3 = true;
-                    break;
-                }
-            }
+        //    foreach (var x in lista) // check que el rango no tenga ninguna ocupacion intermedia
+        //    {
+        //        if (x.FechaInicial >= fechaInicial && x.FechaFinal <= fechaFinal)
+        //        {
+        //            check3 = true;
+        //            break;
+        //        }
+        //    }
 
-            if (check1 == false && check2 == false && check3 == false)
-            {
-                return false;
-            }
+        //    if (check1 == false && check2 == false && check3 == false)
+        //    {
+        //        return false;
+        //    }
 
-            return true;
+        //    return true;
 
-        }
+        //}
 
-        public AgendaChoferResponseDTO retornarAgendaDeEsosDias(int choferId, DateTime fecha) // para una fecha concreta, retornar el rango de ocupacion en el que esta incluida
-        {
-            var lista = retornarAgenda(choferId);
+        //public AgendaChoferResponseDTO retornarAgendaDeEsosDias(int choferId, DateTime fecha) // para una fecha concreta, retornar el rango de ocupacion en el que esta incluida
+        //{
+        //    var lista = retornarAgenda(choferId);
 
-            foreach (var x in lista)
-            {
-                if (fecha <= x.FechaFinal && fecha >= x.FechaInicial)
-                {
-                    return x;
-                }
-            }
-            return null;
-        }
+        //    foreach (var x in lista)
+        //    {
+        //        if (fecha <= x.FechaFinal && fecha >= x.FechaInicial)
+        //        {
+        //            return x;
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        public void vaciarAgendaDeChofer(int choferId) // elimina toda la agenda de un chofer
-        {
-            foreach(var agenda in this.repository.Traer<AgendaChofer>())
-            {
-                if (agenda.ChoferId == choferId)
-                {
-                    this.repository.DeleteById<AgendaChofer>(agenda.Id);
-                }
-            }
-        }
+        //public void vaciarAgendaDeChofer(int choferId) // elimina toda la agenda de un chofer
+        //{
+        //    foreach(var agenda in this.repository.Traer<AgendaChofer>())
+        //    {
+        //        if (agenda.ChoferId == choferId)
+        //        {
+        //            this.repository.DeleteById<AgendaChofer>(agenda.Id);
+        //        }
+        //    }
+        //}
 
-        public void eliminarAgendaSegunViajeId(int choferId, int viajeId) // eliminar una agenda segun choferid y viajeid
-        {
-            foreach (var agenda in this.repository.Traer<AgendaChofer>())
-            {
-                if (agenda.ChoferId == choferId && agenda.ViajeId == viajeId)
-                {
-                    this.repository.DeleteById<AgendaChofer>(agenda.Id);
-                }
-            }
-        }
+        //public void eliminarAgendaSegunViajeId(int choferId, int viajeId) // eliminar una agenda segun choferid y viajeid
+        //{
+        //    foreach (var agenda in this.repository.Traer<AgendaChofer>())
+        //    {
+        //        if (agenda.ChoferId == choferId && agenda.ViajeId == viajeId)
+        //        {
+        //            this.repository.DeleteById<AgendaChofer>(agenda.Id);
+        //        }
+        //    }
+        //}
 
     }
 }

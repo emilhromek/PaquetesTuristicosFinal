@@ -103,123 +103,123 @@ namespace Turismo.Template.API.Controllers
             }
         }
 
-        [Route("queEstenLibres")]
-        [HttpGet]
-        public IActionResult GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal)
-        {
-            try
-            {
-                return new JsonResult(_services.GetAllQueEstenLibres(fechaInicial, fechaFinal)) { StatusCode = 200 };
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("queEstenLibres")]
+        //[HttpGet]
+        //public IActionResult GetAllQueEstenLibres(DateTime fechaInicial, DateTime fechaFinal)
+        //{
+        //    try
+        //    {
+        //        return new JsonResult(_services.GetAllQueEstenLibres(fechaInicial, fechaFinal)) { StatusCode = 200 };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
-        [Route("agregarAgenda")]
-        [HttpPost]
-        public IActionResult agregarAgenda(AgendaBusDTO agendaDTO)
-        {
-            try
-            {
-                new JsonResult(_services.agregarAgenda(agendaDTO));
-                return Ok("Ok");
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+        //[Route("agregarAgenda")]
+        //[HttpPost]
+        //public IActionResult agregarAgenda(AgendaBusDTO agendaDTO)
+        //{
+        //    try
+        //    {
+        //        new JsonResult(_services.agregarAgenda(agendaDTO));
+        //        return Ok("Ok");
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
 
-        }
+        //}
 
-        [Route("retornarAgenda")]
-        [HttpGet]
-        public IActionResult retornarAgenda(int BusId)
-        {
-            try
-            {
-                return new JsonResult(_services.retornarAgenda(BusId)) { StatusCode = 200 };
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("retornarAgenda")]
+        //[HttpGet]
+        //public IActionResult retornarAgenda(int BusId)
+        //{
+        //    try
+        //    {
+        //        return new JsonResult(_services.retornarAgenda(BusId)) { StatusCode = 200 };
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
-        [Route("retornarAgendaConFormato")]
-        [HttpGet]
-        public IActionResult retornarAgendaConFormato(int BusId)
-        {
-            try
-            {
-                return new JsonResult(_services.retornarAgendaConFormato(BusId)) { StatusCode = 200 };
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("retornarAgendaConFormato")]
+        //[HttpGet]
+        //public IActionResult retornarAgendaConFormato(int BusId)
+        //{
+        //    try
+        //    {
+        //        return new JsonResult(_services.retornarAgendaConFormato(BusId)) { StatusCode = 200 };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
-        [Route("agenda/CheckSiFechaEstaOcupada")]
-        [HttpGet]
-        public IActionResult checkSiFechaEstaOcupada(int BusId, DateTime fecha)
-        {
-            try
-            {
-                new JsonResult(_services.checkSiFechaEstaOcupada(BusId, fecha));
-                return Ok("Ok");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+        //[Route("agenda/CheckSiFechaEstaOcupada")]
+        //[HttpGet]
+        //public IActionResult checkSiFechaEstaOcupada(int BusId, DateTime fecha)
+        //{
+        //    try
+        //    {
+        //        new JsonResult(_services.checkSiFechaEstaOcupada(BusId, fecha));
+        //        return Ok("Ok");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
 
-        }
+        //}
 
-        [Route("retornarAgendaDeEsosDias")]
-        [HttpGet]
-        public IActionResult retornarAgendaDeEsosDias(int BusId, DateTime fecha)
-        {
-            try
-            {
-                new JsonResult(_services.retornarAgendaDeEsosDias(BusId, fecha));
-                return Ok("Ok");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("retornarAgendaDeEsosDias")]
+        //[HttpGet]
+        //public IActionResult retornarAgendaDeEsosDias(int BusId, DateTime fecha)
+        //{
+        //    try
+        //    {
+        //        new JsonResult(_services.retornarAgendaDeEsosDias(BusId, fecha));
+        //        return Ok("Ok");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
-        [Route("vaciarAgenda")]
-        [HttpDelete]
-        public IActionResult vaciarAgendaDeBus(int BusId)
-        {
-            try
-            {
-                _services.vaciarAgendaDeBus(BusId);
-                return Ok("Ok");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("vaciarAgenda")]
+        //[HttpDelete]
+        //public IActionResult vaciarAgendaDeBus(int BusId)
+        //{
+        //    try
+        //    {
+        //        _services.vaciarAgendaDeBus(BusId);
+        //        return Ok("Ok");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
 
-        [Route("borrarAgendaSegunViaje")]
-        [HttpDelete]
-        public IActionResult eliminarAgendaSegunViajeId(int BusId, int viajeId)
-        {
-            try
-            {
-                _services.eliminarAgendaSegunViajeId(BusId, viajeId);
-                return Ok("Ok");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+        //[Route("borrarAgendaSegunViaje")]
+        //[HttpDelete]
+        //public IActionResult eliminarAgendaSegunViajeId(int BusId, int viajeId)
+        //{
+        //    try
+        //    {
+        //        _services.eliminarAgendaSegunViajeId(BusId, viajeId);
+        //        return Ok("Ok");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
     }
 }

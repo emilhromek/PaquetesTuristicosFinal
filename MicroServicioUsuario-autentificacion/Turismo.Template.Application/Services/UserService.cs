@@ -77,7 +77,7 @@ namespace Turismo.Template.Application.Services
             }
             else
             {
-                _repository.DeleteBy<User>(id);
+                _repository.Delete<User>(user);
             }
             
         }
@@ -87,25 +87,31 @@ namespace Turismo.Template.Application.Services
             return _query.GetUserByEmail(email);
         }
 
-        public UserDto Update(int id, UserDto user)
+        public UserDto Update(int id, UserDto userDto)
         {
+            var user = _repository.FindBy<User>(id);
+            if (user == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
             var entity = new User
             {
                 UserId = id,
-                Nombre = user.Nombre,
-                Apellido = user.Apellido,
-                Email = user.Email,
-                Password = user.Password,
-                RollId = user.Roll
+                Nombre = userDto.Nombre,
+                Apellido = userDto.Apellido,
+                Email = userDto.Email,
+                Password = userDto.Password,
+                RollId = userDto.Roll
             };
             _repository.Update<User>(entity);
             return new UserDto
             {
-                Nombre = user.Nombre,
-                Apellido = user.Apellido,
-                Email = user.Email,
+                Nombre = userDto.Nombre,
+                Apellido = userDto.Apellido,
+                Email = userDto.Email,
                 Password = "*****",
-                Roll = user.Roll
+                Roll = userDto.Roll
             };
         }
 

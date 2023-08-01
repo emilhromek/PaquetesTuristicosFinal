@@ -24,22 +24,19 @@
             <img src="~/image/Splinter.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             Splinters
           </a>
-          <span class="navbar-text">
-            <a href="#" onclick="login()">Iniciar sesión</a>
-          </span>
+          <div class="container" id="infoUsuario">
+          </div>
         </div>
         </nav>
         <div>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Paquetes</a>
-                </li>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>                
                 <li class="nav-item">
                     <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Destinos">Destinos</a>
                 </li>
+
                 <li id="contacto" class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
